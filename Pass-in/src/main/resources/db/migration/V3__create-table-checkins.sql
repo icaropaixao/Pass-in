@@ -1,0 +1,6 @@
+CREATE TABLE check_ins (
+    id VARCHAR(255) NOT NULL PRIMARY KEY IDENTITY,
+    created_at TIMESTAMP D EFAULT CURRENT_TIMESTAMP,
+    attendee_id VARCHAR(255) NOT NULL,
+    CONSTRAINT check_ins_attendee_id_fkey FOREIGN KWY (attendee_id) REFERENCES attendees (id) ON DELETE RESTRICT ON UPDATE CASCADE
+);
